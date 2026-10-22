@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurelia Legends has moved!</title>
+  <meta name="description" content="Aurelia Legends has moved to aurelialegends.xyz" />
+  <meta name="theme-color" content="#102888" />
+  <link rel="canonical" href="https://aurelialegends.xyz/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg: #0b1020; --panel: #141c33; --line: #2e3d66; --ink: #e6edf7; --mut: #8b99ad; --yel: #ffd93b; --red: #e5483f; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: radial-gradient(ellipse at 50% 20%, #1a2a5a 0%, var(--bg) 70%);
+      color: var(--ink); font-family: "Press Start 2P", monospace; line-height: 1.8;
+      display: grid; place-items: center; padding: 16px;
+    }
+    .card {
+      position: relative; width: min(560px, 100%); text-align: center;
+      background: var(--panel); border-radius: 14px; padding: 36px 24px 30px;
+      box-shadow: 0 0 0 3px var(--line), 0 0 0 6px #0a0f1e, 0 0 0 9px var(--line), 0 18px 40px rgba(0,0,0,.5);
+    }
+    .rotom { width: 120px; height: auto; image-rendering: pixelated; animation: bob 1.6s ease-in-out infinite; filter: drop-shadow(0 6px 0 rgba(0,0,0,.35)); }
+    @keyframes bob { 50% { transform: translateY(-8px) rotate(-3deg); } }
+    .bubble {
+      position: relative; display: inline-block; margin: 6px 0 22px; padding: 10px 14px; font-size: 10px;
+      background: #fff; color: #22303f; border-radius: 8px; box-shadow: inset 0 0 0 3px #5b7da3;
+    }
+    .bubble::before { content: ""; position: absolute; left: 50%; top: -8px; margin-left: -8px; border: 8px solid transparent; border-top: 0; border-bottom-color: #5b7da3; }
+    h1 { margin: 0 0 14px; font-size: 18px; color: var(--yel); text-shadow: 3px 3px var(--red); letter-spacing: 1px; }
+    p { margin: 0 0 18px; font-size: 9px; color: var(--mut); }
+    .new { color: var(--ink); }
+    .btn {
+      display: inline-block; margin-top: 6px; padding: 14px 20px; font: inherit; font-size: 11px; text-decoration: none;
+      color: #1d1d1d; background: var(--yel); border-radius: 6px; box-shadow: 0 4px 0 #b8901a, 0 0 0 3px #1d1d1d;
+    }
+    .btn:hover, .btn:focus-visible { background: #ffe56b; outline: none; }
+    .btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #b8901a, 0 0 0 3px #1d1d1d; }
+    small { display: block; margin-top: 22px; font-size: 7px; color: var(--mut); }
+    @media (max-width: 420px) { h1 { font-size: 14px; } .btn { font-size: 9px; padding: 12px 14px; } }
+    @media (prefers-reduced-motion: reduce) { .rotom { animation: none; } }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img class="rotom" alt="Rotom" src="data:image/png;base64,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" />
+    <div><span class="bubble">Bzzt! We moved!</span></div>
+    <h1>NEW ADDRESS!</h1>
+    <p>This is the old home of <span class="new">Aurelia Legends</span>. The game now lives on a new domain. Log in with the same account and your progress is waiting for you.</p>
+    <a class="btn" href="https://aurelialegends.xyz/">&#9654; PLAY AT AURELIALEGENDS.XYZ</a>
+    <small>Update your bookmarks: aurelialegends.xyz</small>
+  </main>
+</body>
+</html>
