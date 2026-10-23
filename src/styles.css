@@ -1,0 +1,32 @@
+:root { --bg: #0b1020; --panel: #141c33; --line: #2e3d66; --ink: #e6edf7; --mut: #8b99ad; --yel: #ffd93b; --red: #e5483f; }
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; height: 100%; }
+body {
+  background: radial-gradient(ellipse at 50% 20%, #1a2a5a 0%, var(--bg) 70%);
+  color: var(--ink); font-family: "Press Start 2P", monospace; line-height: 1.8;
+}
+#root { display: grid; place-items: center; padding: 16px; }
+.card {
+  position: relative; width: min(560px, 100%); text-align: center;
+  background: var(--panel); border-radius: 14px; padding: 36px 24px 30px;
+  box-shadow: 0 0 0 3px var(--line), 0 0 0 6px #0a0f1e, 0 0 0 9px var(--line), 0 18px 40px rgba(0, 0, 0, .5);
+}
+.rotom { width: 120px; height: auto; image-rendering: pixelated; animation: bob 1.6s ease-in-out infinite; filter: drop-shadow(0 6px 0 rgba(0, 0, 0, .35)); }
+@keyframes bob { 50% { transform: translateY(-8px) rotate(-3deg); } }
+.bubble {
+  position: relative; display: inline-block; margin: 6px 0 22px; padding: 10px 14px; font-size: 10px;
+  background: #fff; color: #22303f; border-radius: 8px; box-shadow: inset 0 0 0 3px #5b7da3;
+}
+.bubble::before { content: ""; position: absolute; left: 50%; top: -8px; margin-left: -8px; border: 8px solid transparent; border-top: 0; border-bottom-color: #5b7da3; }
+h1 { margin: 0 0 14px; font-size: 18px; color: var(--yel); text-shadow: 3px 3px var(--red); letter-spacing: 1px; }
+p { margin: 0 0 18px; font-size: 9px; color: var(--mut); }
+.new { color: var(--ink); }
+.btn {
+  display: inline-block; margin-top: 6px; padding: 14px 20px; font: inherit; font-size: 11px; text-decoration: none;
+  color: #1d1d1d; background: var(--yel); border-radius: 6px; box-shadow: 0 4px 0 #b8901a, 0 0 0 3px #1d1d1d;
+}
+.btn:hover, .btn:focus-visible { background: #ffe56b; outline: none; }
+.btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #b8901a, 0 0 0 3px #1d1d1d; }
+small { display: block; margin-top: 22px; font-size: 7px; color: var(--mut); }
+@media (max-width: 420px) { h1 { font-size: 14px; } .btn { font-size: 9px; padding: 12px 14px; } }
+@media (prefers-reduced-motion: reduce) { .rotom { animation: none; } }
