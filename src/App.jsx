@@ -9,7 +9,7 @@ export default function App() {
       <h1>NEW ADDRESS!</h1>
       <p>
         This is the old home of <span className="new">Aurelia Legends</span>. The game now lives on a new domain.
-        Log in with the same account and your progress is waiting for you.
+        Log in with the same account and your progress is waiting for you!
       </p>
       <a className="btn" href={NEW_SITE}>&#9654; PLAY AT AURELIALEGENDS.XYZ</a>
       <small>Update your bookmarks: aurelialegends.xyz</small>
